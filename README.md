@@ -79,12 +79,15 @@ See [the Issue 9 source map](docs/asd-ste100-issue9.md) for the review scope.
 
 ## Reusable skills
 
-The project provides three independent skill files:
+The project provides four independent skill files:
+- [Adopt ASD-STE100 in another project](.github/skills/asd-ste100-adopt/SKILL.md)
 - [ASD-STE100 author](.github/skills/asd-ste100-author/SKILL.md)
 - [ASD-STE100 reviewer](.github/skills/asd-ste100-review/SKILL.md)
 - [Technical terminology curator](.github/skills/asd-ste100-terminology/SKILL.md)
 
 An agent can read the skill file before it writes or reviews a document.
+Each skill has a Cursor discovery pointer in `.cursor/skills/`.
+The canonical skill text stays in `.github/skills/`.
 These files do not install external software or grant permissions.
 Keep the full PDF in an authorized private location.
 
