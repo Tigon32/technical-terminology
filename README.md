@@ -86,8 +86,13 @@ The project provides four independent skill files:
 - [Technical terminology curator](.github/skills/asd-ste100-terminology/SKILL.md)
 
 An agent can read the skill file before it writes or reviews a document.
-Each skill has a Cursor discovery pointer in `.cursor/skills/`.
-The canonical skill text stays in `.github/skills/`.
+The canonical skill text is in `.github/skills/`.
+Common discovery paths are `.agents/skills/` (Codex), `.claude/skills/` (Claude), and `.cursor/skills/` (Cursor).
+Copilot can use `.github/skills/` and `.github/copilot-instructions.md` where its version supports these files.
+`AGENTS.md` gives common rules to tools that read it.
+`CLAUDE.md` points to those common rules.
+Agents with other conventions can read the canonical skill file directly.
+Check support for these paths in the installed agent version.
 These files do not install external software or grant permissions.
 Keep the full PDF in an authorized private location.
 
