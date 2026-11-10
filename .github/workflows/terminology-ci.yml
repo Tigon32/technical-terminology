@@ -16,5 +16,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Validate shared concepts
         run: node scripts/validate.mjs concepts/core.json
-      - name: Run registry tests
+      - name: Run registry and ASD-STE100 review tests
         run: node --test tests/*.test.mjs
+      - name: Review generic procedure example
+        run: node scripts/ste-review.mjs --mode procedure examples/short-procedure.md
