@@ -1,0 +1,20 @@
+name: Terminology CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate shared concepts
+        run: node scripts/validate.mjs concepts/core.json
+      - name: Run registry tests
+        run: node --test tests/*.test.mjs
